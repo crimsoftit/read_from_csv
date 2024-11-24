@@ -5,7 +5,9 @@ import 'currency_model.dart';
 void main() {
   print('enter the file name to read from...');
 
-  String fileName = stdin.readLineSync().toString();
+  //String fileName = stdin.readLineSync().toString();
+
+  String fileName = 'currency_tings.csv';
 
   final lines = File(fileName).readAsLinesSync();
   //lines.removeAt(0);
@@ -14,10 +16,12 @@ void main() {
 
   var kenya;
 
+  String country = 'Tanzania';
+
   for (var line in lines) {
     var values = fileName == "Marks.csv" ? line.split(';') : line.split(',');
 
-    curDetails.add(CurrencyModel(country: values[0], curCode: values[1]));
+    curDetails.add(CurrencyModel(country: values[0], curCode: values[3]));
 
     // curDetails.add({
     //   'country': values[0],
@@ -25,7 +29,7 @@ void main() {
     // });
   }
 
-  var code = curDetails.where((item) => item.country == '"Kenya"');
+  var code = curDetails.where((item) => item.country == '"$country"');
   //print(code.indexed);
 
   kenya = code.indexed.toList();
