@@ -1,7 +1,5 @@
 import 'dart:io';
 
-import 'currency_model.dart';
-
 void main() {
   print('enter the file name to read from...');
 

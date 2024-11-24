@@ -7,7 +7,7 @@ void main() {
 
   //String fileName = stdin.readLineSync().toString();
 
-  String fileName = 'currency_tings.csv';
+  String fileName = 'assets/currency_tings.csv';
 
   final lines = File(fileName).readAsLinesSync();
   //lines.removeAt(0);
